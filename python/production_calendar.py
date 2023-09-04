@@ -75,7 +75,7 @@ class production_calendar():
                 'day_on':[]
             },
             2018:{
-                'day_on':[
+                'day_off':[
                     dt.date(2018,1,1),
                     dt.date(2018,1,2),
                     dt.date(2018,1,3),
@@ -100,7 +100,7 @@ class production_calendar():
                 ]
             },
             2019:{
-                'day_on':[
+                'day_off':[
                     dt.date(2019,1,1),
                     dt.date(2019,1,2),
                     dt.date(2019,1,3),
@@ -116,10 +116,10 @@ class production_calendar():
                     dt.date(2019,6,12),
                     dt.date(2019,11,4),
                 ],
-                'day_off':[]
+                'day_n':[]
             },
             2020:{
-                'day_on':[
+                'day_off':[
                     dt.date(2020,1,1),
                     dt.date(2020,1,2),
                     dt.date(2020,1,3),
@@ -135,10 +135,10 @@ class production_calendar():
                     dt.date(2020,6,12),
                     dt.date(2020,11,4),
                 ],
-                'day_off':[]
+                'day_on':[]
             },
             2021:{
-                'day_on':[
+                'day_off':[
                     dt.date(2021,1,1),
                     dt.date(2021,1,4),
                     dt.date(2021,1,5),
@@ -155,12 +155,12 @@ class production_calendar():
                     dt.date(2021,11,5),
                     dt.date(2021,12,31),
                 ],
-                'day_off':[
+                'day_on':[
                     dt.date(2021,2,20),
                 ]
             },
             2022:{
-                'day_on':[
+                'day_off':[
                     dt.date(2022,1,3),
                     dt.date(2022,1,4),
                     dt.date(2022,1,5),
@@ -177,12 +177,12 @@ class production_calendar():
                     dt.date(2022,11,4),
                     dt.date(2022,12,31),
                 ],
-                'day_off':[
+                'day_on':[
                     dt.date(2022,3,5)
                 ]
             },
             2023:{
-                'day_on':[
+                'day_off':[
                     dt.date(2023,1,2),
                     dt.date(2023,1,3),
                     dt.date(2023,1,4),
@@ -197,10 +197,10 @@ class production_calendar():
                     dt.date(2023,6,12),
                     dt.date(2023,11,6),
                 ],
-                'day_off':[]
+                'day_on':[]
             },
             2024:{
-                'day_on':[
+                'day_off':[
                     dt.date(2024,1,1),
                     dt.date(2024,1,2),
                     dt.date(2024,1,3),
@@ -219,7 +219,8 @@ class production_calendar():
                     dt.date(2024,12,30),
                     dt.date(2024,12,31),
                 ],
-                'day_off':[
+                'day_on':[
+                    dt.date(2024,4,27),
                     dt.date(2024,11,2),
                     dt.date(2024,12,28),
                 ]
@@ -237,10 +238,11 @@ class production_calendar():
             if cur_dt in self.days_dict[cur_dt.year]['day_on']:
                 self.day_type_name = "рабочий"
             else:
-                self.day_type_name = "выходной"  
+                self.day_type_name = "выходной"
         new_dt = cur_dt
+        new_dt += dt.timedelta(days=1)
         while new_dt.isoweekday() in [6, 7] or new_dt in self.days_dict[new_dt.year]['day_off']:
-                new_dt += dt.timedelta(days=1)        
+            new_dt += dt.timedelta(days=1)
         self.day_next_work = new_dt
         self.day_of_week = cur_dt.isoweekday()
         self.day_of_month = cur_dt.day
@@ -301,4 +303,3 @@ class production_calendar():
 
 pclnd = production_calendar(dt.date.today())
 pclnd.get_all_params()
-
