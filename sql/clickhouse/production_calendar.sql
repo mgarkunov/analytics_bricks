@@ -11,9 +11,9 @@ day_on as (
 ),
 calendar as (
     select 
-        arrayJoin(arrayMap(x -> toDate(x), range(toInt32(sdt), toInt32(edt), 1))) as day_dt,
+        arrayJoin(arrayMap(x -> toDate(x), range(toInt32(sdt), toInt32(edt + 1), 1))) as day_dt,
         ['понедельник', 'вторник', 'среда', 'четверг', 'пятница', 'суббота', 'воскресенье'][toDayOfWeek(day_dt)] as day_weekday_name,
-                case
+        case
             when toDayOfWeek(day_dt) in (6,7) and  day_dt in (select * from day_on) then 'рабочий'
             when toDayOfWeek(day_dt) in (1,2,3,4,5) and day_dt in (select * from day_off) then 'выходной'
             when toDayOfWeek(day_dt) in (6,7) and day_dt not in (select * from day_on) then 'выходной'
