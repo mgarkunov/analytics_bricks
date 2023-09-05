@@ -4,8 +4,9 @@
 
 *Примеры SQL кода для аналитиков*
 
-### [Production Calendar / Производственный календарь](https://github.com/mgarkunov/analytics_bricks/tree/main/sql/postgresql)
+### Production Calendar / Производственный календарь
 
-Production calendar for Russia for 2015 - 2030 for PostgreSQL
+Production calendar for Russia for 2015 - 2030 / производственный календарь для России на 2015 - 2030 год
 
-Производственный календарь для России на 2015 - 2030 год для PostgreSQL
+ - [Implementation in PostgreSQL / Реализация для PostreSQL](https://github.com/mgarkunov/analytics_bricks/blob/main/sql/postgresql/production_calendar.sql)
+ - [Implementation in PostgreSQL / Реализация для PostreSQL](https://github.com/mgarkunov/analytics_bricks/blob/main/sql/clickhouse/production_calendar.sql)
