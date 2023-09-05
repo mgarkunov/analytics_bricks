@@ -44,3 +44,9 @@ Functions for generating a production calendar with the definition of day parame
 Функции для формирования производстветственного календаря с определением параметров дня и определения ближайшее рабочего дня.
 
 ## [SQL](https://github.com/mgarkunov/analytics_bricks/tree/main/sql)
+
+### [Production Calendar / Производственный календарь](https://github.com/mgarkunov/analytics_bricks/tree/main/sql/postgresql)
+
+Production calendar for Russia for 2015 - 2030 for PostgreSQL
+
+Производственный календарь для России на 2015 - 2030 год для PostgreSQL
