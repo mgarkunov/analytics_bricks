@@ -1,7 +1,6 @@
 # Javascript Bricks
-JavaScript code examples for analysts
-Примеры JavaScript кода для аналитиков
+Примеры JavaScript кода для аналитиков / JavaScript code examples for analysts
+
 
 ## ru_translit.js
-The function of transliterating Russian text into Latin.
-Функция транслитерации русского текста в латиницу.
+Функция транслитерации русского текста в латиницу. / The function of transliterating Russian text into Latin.

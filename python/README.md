@@ -1,9 +1,5 @@
 # Python Bricks
-Python code examples for analysts.
-Примеры Python кода для аналитиков.
+Примеры Python кода для аналитиков. / Python code examples for analysts.
 
-
-## Production calendar in Python / Производственный календарь на Python
-*production_calendar.py*
-Functions for generating a production calendar with the definition of day parameters and determining the nearest working day.
-Функции для формирования производстветственного календаря с определением параметров дня и определения ближайшее рабочего дня.
+## Производственный календарь / Production Сalendar (production_calendar.py)
+Функции для формирования производстветственного календаря с определением параметров дня и определения ближайшее рабочего дня. / Functions for generating a production calendar with the definition of day parameters and determining the nearest working day.
