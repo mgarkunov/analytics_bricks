@@ -299,4 +299,3 @@ class date_utils:
             raise ValueError("Incorrect params format")
 
         return cur_dt.replace(year=cur_dt.year, month=1, day=1) - dt.timedelta(days=1)
-

@@ -238,10 +238,11 @@ class production_calendar():
             if cur_dt in self.days_dict[cur_dt.year]['day_on']:
                 self.day_type_name = "рабочий"
             else:
-                self.day_type_name = "выходной"  
+                self.day_type_name = "выходной"
         new_dt = cur_dt
+        new_dt += dt.timedelta(days=1)
         while new_dt.isoweekday() in [6, 7] or new_dt in self.days_dict[new_dt.year]['day_off']:
-                new_dt += dt.timedelta(days=1)        
+            new_dt += dt.timedelta(days=1)
         self.day_next_work = new_dt
         self.day_of_week = cur_dt.isoweekday()
         self.day_of_month = cur_dt.day
